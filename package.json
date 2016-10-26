@@ -1,28 +1,33 @@
 {
-    "name": "vue-qrcode-component",
-    "version": "1.0.0",
-    "description": "Vue component to create a QR code.",
-    "main": "index.js",
-    "keywords": [
-        "qr",
-        "code",
-        "vue",
-        "component"
-    ],
-    "author": "Gerard Reches <gerardreches@gmail.com> (http://gerardreches.com)",
-    "license": "MIT",
-    "dependencies": {
-        "vue": "^2.0.1",
-        "qrcode-js-package": "^1.0.4"
-    },
-    "browserify": {
-        "transform": [
-            [
-                "babelify", { "presets": ["es2015"] }
-            ],
-            [
-                "vueify"
-            ]
-        ]
-    }
+  "name": "vue-qrcode-component",
+  "version": "1.1.0",
+  "description": "Vue component to create a QR code.",
+  "main": "index.js",
+  "keywords": [
+    "qr",
+    "code",
+    "vue",
+    "component"
+  ],
+  "author": "Gerard Reches <gerardreches@gmail.com> (http://gerardreches.com)",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.0.1",
+    "qrcode-js-package": "^1.0.4"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ],
+      [
+        "vueify"
+      ]
+    ]
+  }
 }
