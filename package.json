@@ -10,6 +10,12 @@
     "component"
   ],
   "author": "Gerard Reches <gerardreches@gmail.com> (http://gerardreches.com)",
+  "url": "https://github.com/gerardreches/vue-qrcode-component/issues",
+  "email": "grmultimedia@gerardreches.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gerardreches/vue-qrcode-component.git"
+  },
   "license": "MIT",
   "dependencies": {
     "vue": "^2.0.1",
