@@ -9,8 +9,7 @@
 
         props: {
             text: {type: String, required: true},
-            width: Number,
-            height: Number,
+            size: Number,
             colorDark: String,
             colorLight: String
         },
@@ -24,10 +23,10 @@
         mounted() {
             this.qrcode = new QRCode(document.getElementById('qr-code'), {
                 text: this.text,
-                width: this.width,
-                height: this.height,
-                colorDark : "#000000",
-                colorLight : "#ffffff",
+                width: typeof this.size !== "undefined" ? this.size : 256,
+                height: typeof this.size !== "undefined" ? this.size : 256,
+                colorDark : typeof this.colorDark !== "undefined" ? this.colorDark : "#000000",
+                colorLight : typeof this.colorLight !== "undefined" ? this.colorLight : "#ffffff",
                 correctLevel : QRCode.CorrectLevel.H
             });
         },
