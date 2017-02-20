@@ -1,6 +1,6 @@
 
 <template>
-    <div id="qr-code"></div>
+    <div :id="id"></div>
 </template>
 
 <script>
@@ -8,6 +8,7 @@
     export default {
 
         props: {
+            id: {type: String, required: true},
             text: {type: String, required: true},
             size: Number,
             colorDark: String,
@@ -21,7 +22,7 @@
         },
 
         mounted() {
-            this.qrcode = new QRCode(document.getElementById('qr-code'), {
+            this.qrcode = new QRCode(document.getElementById(this.id), {
                 text: this.text,
                 width: typeof this.size !== "undefined" ? this.size : 256,
                 height: typeof this.size !== "undefined" ? this.size : 256,
