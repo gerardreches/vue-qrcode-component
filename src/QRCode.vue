@@ -10,34 +10,34 @@
         props: {
             id: {type: String, required: true},
             text: {type: String, required: true},
-            size: Number,
-            colorDark: String,
-            colorLight: String
+            size: {type: Number, required: false, default: 256},
+            colorDark: {type: String, required: false, default: '#000000'},
+            colorLight: {type: String, required: false, default: '#FFFFFF'}
         },
 
         data() {
             return{
-                qrcode: {}
+                qrCode: {}
             }
         },
 
         mounted() {
-            this.qrcode = new QRCode(document.getElementById(this.id), {
+            this.qrCode = new QRCode(document.getElementById(this.id), {
                 text: this.text,
-                width: typeof this.size !== "undefined" ? this.size : 256,
-                height: typeof this.size !== "undefined" ? this.size : 256,
-                colorDark : typeof this.colorDark !== "undefined" ? this.colorDark : "#000000",
-                colorLight : typeof this.colorLight !== "undefined" ? this.colorLight : "#ffffff",
+                width: this.size,
+                height: this.size,
+                colorDark : this.colorDark,
+                colorLight : this.colorLight,
                 correctLevel : QRCode.CorrectLevel.H
             });
         },
 
         methods: {
             clear: function () {
-                this.qrcode.clear();
+                this.qrCode.clear();
             },
             makeCode: function (text) {
-                this.qrcode.makeCode(text);
+                this.qrCode.makeCode(text);
             }
         }
     }
