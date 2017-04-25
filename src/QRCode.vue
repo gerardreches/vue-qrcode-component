@@ -1,6 +1,6 @@
 
 <template>
-    <div :id="id"></div>
+    <div></div>
 </template>
 
 <script>
@@ -8,11 +8,18 @@
     export default {
 
         props: {
-            id: {type: String, required: true},
             text: {type: String, required: true},
             size: {type: Number, required: false, default: 256},
-            colorDark: {type: String, required: false, default: '#000000'},
-            colorLight: {type: String, required: false, default: '#FFFFFF'}
+            color: {type: String, required: false, default: '#000'},
+            bgColor: {type: String, required: false, default: '#FFF'},
+            errorLevel: {
+                type: String, 
+                validator: function (value) {
+                    return value === 'L' || value === 'M' || value === 'Q' || value === 'H'
+                }, 
+                required: false, 
+                default: 'H'
+            },
         },
 
         data() {
@@ -22,13 +29,13 @@
         },
 
         mounted() {
-            this.qrCode = new QRCode(document.getElementById(this.id), {
+            this.qrCode = new QRCode(this.$el, {
                 text: this.text,
                 width: this.size,
                 height: this.size,
-                colorDark : this.colorDark,
-                colorLight : this.colorLight,
-                correctLevel : QRCode.CorrectLevel.H
+                colorDark : this.color,
+                colorLight : this.bgColor,
+                correctLevel : QRCode.CorrectLevel[this.errorLevel]
             });
         },
 

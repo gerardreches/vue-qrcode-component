@@ -19,34 +19,34 @@ Vue.component('qr-code', VueQRCodeComponent)
 ```
 Now you can use it as
 ```html
-<qr-code id="my-qrcode" text="Text to transform"></qr-code>
+<qr-code text="Text to encode"></qr-code>
 ```
 
 ## Usage
 
-These are the component props:
-```js
-id: {type: String, required: true},
-text: {type: String, required: true},
-size: {type: Number, required: false, default: 256},
-colorDark: {type: String, required: false, default: '#000000'},
-colorLight: {type: String, required: false, default: '#FFFFFF'}
-```
-A **unique id is required** for a `document.getElementById('id')` operation. A **text is also required**, cause the generated QR code will represent that text.
+### Props
 
-You can also change the size in _px_ of the QR code (256px by default) and their colors (traditional black & white by default).
+| prop        | type   | required | default | validation                         |
+|-------------|--------|----------|---------|------------------------------------|
+| text        | String | true     |         |                                    |
+| size        | Number | false    | 256     |                                    |
+| color       | String | false    | '#000'  |                                    |
+| bg-color    | String | false    | '#FFF'  |                                    |
+| error-level | String | false    | 'H'     | Only accepts 'L', 'M', 'Q' or 'H'. |
+
+_**Note:** size prop uses pixels units._
 
 ### Example
 
-We will generate a QR code that gives an URL to this repo on decode. It measures 500x500 px, uses a yellow color for the code and a blue color for the background.
+We will generate a QR code that gives an URL on decode. It measures 500x500 px, uses a yellow color for the code and a blue color for the background. This QR will use a **Low** error correction level.
 
 ```html
 <qr-code 
-    id="my-qr-code" 
-    text="https://github.com/gerardreches/vue-qrcode-component"
+    text="https://goo.gl/9eIWP9"
     size="500"
-    colorDark="#f1c40f"
-    colorLight="#3498db">
+    color="#f1c40f"
+    bg-color="#3498db" 
+    error-level="L">
 </qr-code>
 ```
 
