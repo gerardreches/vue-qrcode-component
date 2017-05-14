@@ -1,0 +1,42 @@
+
+html{
+    font-family: "Lato", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+}
+h1:after{
+    content: '';
+    width: 4rem;
+    background-color: white;
+    height: .4rem;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+h2{
+    padding-bottom: .5rem;
+    border-bottom: .1rem solid rgba(0, 0, 0, .1);
+}
+
+input[type="text"]{
+    width: 256px;
+}
+
+.vh-100{
+    height: 100vh;
+}
+
+.inline-code{
+    background-color: #e5e5e5;
+    font-style: italic;
+    color: black;
+}
+
+@media (min-width: 992px) {
+    .flex-first{
+        order: 0;
+    }
+    .flex-last{
+        order: 0;
+    }
+}

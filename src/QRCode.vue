@@ -19,7 +19,14 @@
                 }, 
                 required: false, 
                 default: 'H'
-            },
+            }
+        },
+
+        watch: {
+            text: function () {
+                this.clear();
+                this.makeCode(this.text);
+            }
         },
 
         data() {
