@@ -1,5 +1,7 @@
 # vue-qrcode-component
-Vue component that generates a QR code from a given string.
+Create QR codes with a simple Vue component
+
+## [Demo and Documentation on GitHub Pages](https://gerardreches.github.io/vue-qrcode-component/)
 
 ## Installation
 
