@@ -4,7 +4,7 @@
 </template>
 
 <script>
-    import QRCode from 'qrcode-js-package/qrcode.js'
+    import QRCode from '@keeex/qrcodejs-kx'
     export default {
 
         props: {
