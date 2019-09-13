@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "vue": "^2.0.1",
-    "qrcode-js-package": "^1.0.4"
+    "@keeex/qrcodejs-kx": "^1.0.2"
   },
   "browserify": {
     "transform": [
