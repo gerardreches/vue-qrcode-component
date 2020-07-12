@@ -104,9 +104,9 @@
 
                 <section class="row pt-5">
                     <div class="col-12 col-lg-6 mb-5 d-flex justify-content-between">
-                        <qr-code text="Hello World!" size="100" color="blue"></qr-code>
-                        <qr-code text="Hello World!" size="125" color="#e74c3c" bg-color="gold"></qr-code>
-                        <qr-code text="Hello World!" size="150" color="#34495e" bg-color="#2ecc71"></qr-code>
+                        <qr-code text="Hello World!" :size="100" color="blue"></qr-code>
+                        <qr-code text="Hello World!" :size="125" color="#e74c3c" bg-color="gold"></qr-code>
+                        <qr-code text="Hello World!" :size="150" color="#34495e" bg-color="#2ecc71"></qr-code>
                     </div>
 
                     <div class="col-12 col-lg-6 mb-5 flex-first">
@@ -127,11 +127,11 @@
 
                     <div class="col-12 mb-5">
                         <code class="d-block bg-inverse text-white rounded p-4 mb-3">
-                            &lt;<span class="text-danger">qr-code</span> <span class="text-warning">text</span>="Your text" <span class="text-warning">size</span>="100" <span class="text-warning">color</span>="blue"&gt;&lt;/<span class="text-danger">qr-code</span>&gt;
+                            &lt;<span class="text-danger">qr-code</span> <span class="text-warning">text</span>="Your text" <span class="text-warning">:size</span>="100" <span class="text-warning">color</span>="blue"&gt;&lt;/<span class="text-danger">qr-code</span>&gt;
                             <br>
-                            &lt;<span class="text-danger">qr-code</span> <span class="text-warning">text</span>="Your text" <span class="text-warning">size</span>="125" <span class="text-warning">color</span>="#e74c3c" <span class="text-warning">bg-color</span>="gold"&gt;&lt;/<span class="text-danger">qr-code</span>&gt;
+                            &lt;<span class="text-danger">qr-code</span> <span class="text-warning">text</span>="Your text" <span class="text-warning">:size</span>="125" <span class="text-warning">color</span>="#e74c3c" <span class="text-warning">bg-color</span>="gold"&gt;&lt;/<span class="text-danger">qr-code</span>&gt;
                             <br>
-                            &lt;<span class="text-danger">qr-code</span> <span class="text-warning">text</span>="Your text" <span class="text-warning">size</span>="150" <span class="text-warning">color</span>="#34495e" <span class="text-warning">bg-color</span>="#2ecc71"&gt;&lt;/<span class="text-danger">qr-code</span>&gt;
+                            &lt;<span class="text-danger">qr-code</span> <span class="text-warning">text</span>="Your text" <span class="text-warning">:size</span>="150" <span class="text-warning">color</span>="#34495e" <span class="text-warning">bg-color</span>="#2ecc71"&gt;&lt;/<span class="text-danger">qr-code</span>&gt;
                         </code>
                     </div>
 
@@ -164,10 +164,10 @@
                     </div>
 
                     <div class="col-12 mb-5 d-flex flex-wrap justify-content-between">
-                        <qr-code class="mb-5" text="I have a Low error level correction!" size="200" error-level="L"></qr-code>
-                        <qr-code class="mb-5" text="I have a Low-Medium error level correction!" size="200" error-level="M"></qr-code>
-                        <qr-code class="mb-5" text="I have a Medium-High error level correction!" size="200" error-level="Q"></qr-code>
-                        <qr-code class="mb-5" text="I have a High error level correction!" size="200" error-level="H"></qr-code>
+                        <qr-code class="mb-5" text="I have a Low error level correction!" :size="200" error-level="L"></qr-code>
+                        <qr-code class="mb-5" text="I have a Low-Medium error level correction!" :size="200" error-level="M"></qr-code>
+                        <qr-code class="mb-5" text="I have a Medium-High error level correction!" :size="200" error-level="Q"></qr-code>
+                        <qr-code class="mb-5" text="I have a High error level correction!" :size="200" error-level="H"></qr-code>
                     </div>
                 </section>
     
