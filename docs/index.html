@@ -143,10 +143,16 @@
 
                     <div class="col-12 col-lg-6 mb-5">
                         <p>
-                            You can use <code class="inline-code">v-bind:</code> or the <code class="inline-code">:</code> shorthand to use a variable as <var>text</var> prop.
+                            You can use 4 different error correction level:
+                            <ul>
+                                <li><strong>L</strong> (Low, 7% can be restored)</li>
+                                <li><strong>M</strong> (Medium, 15% can be restored)</li>
+                                <li><strong>Q</strong> (Quartile, 25% can be restored)</li>
+                                <li><strong>H</strong> (High, 30% can be restored)</li>
+                            </ul>
                         </p>
                         <p>
-                            Since the <var>text</var> prop has a watcher, when the value of the variable changes the component will generate a QR code for the new value.
+                            Depending on your chosen level, the data of the QR code will be increased, while the data for the user will remain the same.
                         </p>
                     </div>
 
